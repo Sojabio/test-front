@@ -1,3 +1,10 @@
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    --dark-green: #00372D;
+    --light-green: #0BD89D ;
 }

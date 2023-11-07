@@ -1,0 +1,15 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  margin-top: 1rem;
+  max-width: 80%;
+}
+
+.poster {
+  max-width: 4rem;
+  font-size: 1rem;
+  border-radius: 15%;
+}
