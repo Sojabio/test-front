@@ -1,25 +1,7 @@
 import { Table } from 'antd';
-import { useState, useEffect } from 'react';
-import { fetchMovies } from '../../api/ApiFetch';
 import './style.css'
 
-const MoviesTable = () => {
-  const [movies, setMovies] = useState([])
-
-  // get data from api
-  useEffect(() => {
-    const fetchData = async () => {
-      const moviesData = await fetchMovies()
-      setMovies(moviesData)
-    };
-
-  fetchData();
-    }, []);
-
-  // sort movies by runtime
-  const sortedMovies = movies.sort((a, b) => {
-    return a.runtime - b.runtime
-  })
+const MoviesTable = ( {movies} ) => {
 
   // format runtime to hh:mm:ss
   const formatedRuntime = (runtime) => {
@@ -74,7 +56,7 @@ const MoviesTable = () => {
         <Table
           className="table"
           columns={columns}
-          dataSource={sortedMovies}
+          dataSource={movies}
           bordered
         />
       </div>
