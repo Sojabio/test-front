@@ -17,7 +17,7 @@ const MoviesTable = () => {
     }, []);
 
   // sort movies by runtime
-  movies.sort((a, b) => {
+  const sortedMovies = movies.sort((a, b) => {
     return a.runtime - b.runtime
   })
 
@@ -30,39 +30,53 @@ const MoviesTable = () => {
     return(`${hours}:${minutes}:00`)
   }
 
-  // set ant table
+  // set table
   const columns = [
     {
-      title: 'Poster',
+      title: 'POSTER',
       dataIndex: 'posterUrl',
       key: 'posterUrl',
-      render: (dataIndexValue, record) => <img className="poster" src={dataIndexValue} alt={`poster of ${record.title}`} />    },
+      align: 'center',
+      render: (dataIndexValue, record) => <img className="poster" src={dataIndexValue} alt={`poster of ${record.title}`} />
+    },
     {
-      title: 'Title',
+      title: 'TITLE',
       dataIndex: 'title',
       key: 'title',
+      align: 'center',
+      render: (title) => <p className="table-cell"> {title} </p>
     },
     {
-      title: 'Year of release',
+      title: 'YEAR',
       dataIndex: 'year',
       key: 'year',
+      align: 'center',
+      render: (year) => <p className="table-cell"> {year} </p>
     },
     {
-      title: 'Duration',
+      title: 'DURATION',
       dataIndex: 'runtime',
       key: 'runtime',
-      render: (runtime) => formatedRuntime(runtime),
+      align: 'center',
+      render: (runtime) => <p className="table-cell"> {`${formatedRuntime(runtime)}`} </p>
     },
     {
-      title: 'Plot',
+      title: 'PLOT',
       dataIndex: 'plot',
-      key: 'plot'
+      key: 'plot',
+      render: (plot) => <p className="table-cell"> {plot} </p>
     },
   ]
 
+
   return (
       <div className="table-container">
-        <Table className="table" columns={columns} dataSource={movies} />
+        <Table
+          className="table"
+          columns={columns}
+          dataSource={sortedMovies}
+          bordered
+        />
       </div>
   )
 }

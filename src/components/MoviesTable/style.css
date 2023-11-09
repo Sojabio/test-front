@@ -13,3 +13,56 @@
   font-size: 1rem;
   border-radius: 15%;
 }
+
+.table-cell {
+  color: var(--dark-green);
+  font-size: 1.3rem;
+}
+
+.ant-table-thead .ant-table-cell {
+  background-color: var(--light-green) !important;
+  color: white !important;
+  font-size: 1.3rem;
+  font-weight: ;
+}
+
+.ant-table-cell {
+  background-color: lightgrey;
+}
+
+.ant-pagination-item {
+  background-color: var(--light-green) !important;
+}
+
+.ant-pagination-item-active {
+  background-color: lightgrey !important;
+  border-color: lightgrey !important;
+}
+
+.ant-pagination-item :hover {
+  background-color: lightgrey;
+  border-radius: 6px;
+}
+
+.ant-pagination-item-link {
+  color: var(--light-green) !important;
+}
+
+.ant-pagination-item-link :hover {
+  color: lightgrey;
+}
+
+.ant-pagination-item-ellipsis {
+  color: var(--light-green) !important;
+}
+
+.ant-select-selector {
+  background-color: var(--light-green) !important;
+  color: var(--dark-green) !important;
+  border-color: var(--light-green) !important;
+  cursor: pointer !important;
+}
+
+.ant-select-arrow {
+  color: var(--dark-green) !important;
+}
