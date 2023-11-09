@@ -2,6 +2,9 @@
 
 This app displays a list of movies ranked by duration using **React** and Ant Design.
 
+![grafik](https://github.com/Sojabio/test-front/assets/61155891/38b9de23-eb0d-4481-9451-557c19967f2e)
+
+
 ## Install and run
 
 run :
@@ -11,7 +14,7 @@ npm start
 ```
 
 then in browser go to :
-`https://localhost:5173`
+`http://localhost:5173`
 
 ## Description
 
@@ -24,5 +27,5 @@ The table displayed on the main page has the following columns:
 
 
 ## Links
-- And Design https://ant.design/ (https://ant.design/components/overview/)
+- And Design https://ant.design/
 - React https://reactjs.org/
