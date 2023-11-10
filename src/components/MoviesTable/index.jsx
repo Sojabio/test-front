@@ -1,7 +1,8 @@
 import { Table } from 'antd';
 import './style.css'
 
-const MoviesTable = ( {movies} ) => {
+const MoviesTable = ( {movies, inputTitle} ) => {
+
 
   // format runtime to hh:mm:ss
   const formatedRuntime = (runtime) => {
@@ -11,6 +12,14 @@ const MoviesTable = ( {movies} ) => {
     if (minutes < 10) {minutes = "0" + minutes}
     return(`${hours}:${minutes}:00`)
   }
+
+  // filter movies
+  // const selectedMovies = movies.filter((movie) => {
+  //   return movie.title.includes(inputTitle)
+  // })
+  // console.log(inputTitle)
+  // console.log(selectedMovies)
+
 
   // set table
   const columns = [
@@ -56,7 +65,7 @@ const MoviesTable = ( {movies} ) => {
         <Table
           className="table"
           columns={columns}
-          dataSource={movies}
+          dataSource={movies.filter(movie => movie.title.toLowerCase().includes(inputTitle))}
           bordered
         />
       </div>
